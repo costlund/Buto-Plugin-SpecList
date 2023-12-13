@@ -1,0 +1,31 @@
+version: 1.0.0
+history:
+  1.0.0:
+    date: '2023-12-13'
+    title: 'First version'
+    description: 'First version. Manifest created.'
+plugin:
+  -
+    name: wf/yml
+    version: 1.8.1
+  -
+    name: datatable/datatable_1_10_18
+    version: 1.6.2
+  -
+    name: wf/table
+    version: 1.35.1
+  -
+    name: readme/yml
+    version: 1.5.11
+sys:
+  -
+    name: mercury
+    version:
+      - 2.99.11
+php:
+  version:
+    - 8.2.0
+author: null
+links: null
+description: ''
+third_part_software: null

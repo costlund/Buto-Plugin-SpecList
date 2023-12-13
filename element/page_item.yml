@@ -1,0 +1,24 @@
+-
+  type: widget
+  data:
+    plugin: wf/table
+    method: render_many
+    data:
+      id: dt_plugin_spec_item
+      class:
+        table: table-sm table-striped
+      field:
+        name: Name
+        path: Path
+      datatable:
+        ajax: item_data
+        order:
+          -
+            - 0
+            - asc
+-
+  type: script
+  innerHTML: |
+    $('#dt_plugin_spec_item tbody').on( 'click', 'tr', function () {
+      window.open('spec?key='+datatable_dt_plugin_spec_item.row( this ).index());
+    } );

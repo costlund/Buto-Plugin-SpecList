@@ -1,0 +1,9 @@
+settings:
+  path: '0/innerHTML'
+content:
+  -
+    type: div
+    attribute:
+      class: row
+    
+    

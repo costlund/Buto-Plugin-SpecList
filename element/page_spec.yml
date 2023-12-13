@@ -1,0 +1,17 @@
+settings:
+  layout:
+    - html
+    - main
+  title: Spec
+content:
+  -
+    type: h1
+    innerHTML: rs:name
+  -
+    type: widget
+    data:
+      plugin: readme/yml
+      method: parse
+      data:
+        file: rs:path
+    

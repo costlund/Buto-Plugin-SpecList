@@ -1,0 +1,29 @@
+settings:
+  path: 'html/innerHTML/body/innerHTML'
+  title: Spec
+content:
+  doctype:
+    type: text
+    text: '<!DOCTYPE html>'
+  html:
+    type: html
+    attribute:
+      lang: en
+    innerHTML:
+      head:
+        type: head
+        innerHTML:
+          -
+            type: widget
+            data:
+              plugin: 'theme/include'
+              method: include
+              data:
+                bootswatch:
+                  theme: Cerulean
+                icon: /plugin/spec/list/icon/link_icon.png
+                bootstrap:
+                  version: 5
+      body:
+        type: body
+        innerHTML: 'body...'
