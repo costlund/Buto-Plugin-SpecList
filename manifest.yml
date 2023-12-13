@@ -1,5 +1,9 @@
-version: 1.0.0
+version: 1.0.1
 history:
+  1.0.1:
+    date: '2023-12-13'
+    title: 'Item file'
+    description: 'Alert if item file does not exist.'
   1.0.0:
     date: '2023-12-13'
     title: 'First version'

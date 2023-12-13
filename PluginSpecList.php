@@ -5,8 +5,15 @@ class PluginSpecList{
     wfPlugin::includeonce('wf/yml');
     wfGlobals::setSys('layout_path', '/plugin/spec/list/layout');
     $this->settings = new PluginWfArray(wfArray::get($GLOBALS, 'sys/settings/plugin_modules/'.wfArray::get($GLOBALS, 'sys/class').'/settings'));
-    $temp = new PluginWfArray(wfSettings::getSettingsFromYmlString('yml:'.$this->settings->get('item')));
-    $this->settings->set('item', $temp->get('item') );
+    $this->settings->set('item_org', $this->settings->get('item') );
+    if(wfFilesystem::fileExist(wfGlobals::getAppDir().$this->settings->get('item'))){
+      $temp = new PluginWfArray(wfSettings::getSettingsFromYmlString('yml:'.$this->settings->get('item')));
+      $this->settings->set('item', $temp->get('item') );
+      $this->settings->set('exist', true);
+    }else{
+      $this->settings->set('item', array() );
+      $this->settings->set('exist', false);
+    }
   }
   public function page_start(){
     $page = wfDocument::getElementFromFolder(__DIR__, __FUNCTION__);
@@ -15,7 +22,9 @@ class PluginSpecList{
   }
   public function page_item(){
     wfPlugin::enable('wf/table');
-    wfDocument::renderElementFromFolder(__DIR__, __FUNCTION__);
+    $element = wfDocument::getElementFromFolder(__DIR__, __FUNCTION__);
+    $element->setByTag($this->settings->get(), 'settings');
+    wfDocument::renderElement($element);
   }
   public function page_item_data(){
     wfPlugin::includeonce('datatable/datatable_1_10_18');

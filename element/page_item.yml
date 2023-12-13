@@ -1,4 +1,22 @@
 -
+  type: div
+  settings:
+    disabled: settings:exist
+  attribute: 
+    class: alert alert-warning
+  innerHTML: 
+    -
+      type: div
+      innerHTML:
+        - 
+          type: strong
+          attribute:
+            class: content-colon
+          innerHTML: Item file does not exist
+        - 
+          type: span
+          innerHTML: settings:item_org 
+-
   type: widget
   data:
     plugin: wf/table
