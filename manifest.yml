@@ -1,5 +1,9 @@
-version: 1.0.1
+version: 1.1.0
 history:
+  1.1.0:
+    date: '2023-12-18'
+    title: 'Title, File, Layout, Readme'
+    description: 'Add title. Add save to md file. Layout improvements. Add readme.yml.'
   1.0.1:
     date: '2023-12-13'
     title: 'Item file'

@@ -1,0 +1,40 @@
+readme:
+  name: Plugin-SpecList
+  description: |
+    - List files to be render with plugin readme/yml.
+    - Items listed in table and item open in new window.
+  item:
+    -
+      name: Settings
+      description: |
+        ```
+        plugin_modules:
+          spec:
+            plugin: 'spec/list'
+            settings:
+        ```
+        Admin layout (optional).
+        ```
+              admin_layout: /theme/[theme]/layout/main_bs4.yml
+        ```
+        Item path.
+        ```
+              item: '/../buto_data/theme/[theme]/plugin_spec_list.yml'
+        ```
+    -
+      name: plugin_spec_list.yml
+      description: |
+        Items.
+        ```
+        item:
+          -
+        ```
+        Name and path.
+        ```
+            name: Invoice
+            path: /plugin/invoice/spec/data/spec.yml 
+        ```
+        Save to readme file (optional).
+        ```
+            save: /plugin/invoice/spec/readme.md 
+        ```

@@ -2,10 +2,12 @@ settings:
   layout:
     - html
     - main
-  title: Spec
+  title: rs:name
 content:
   -
-    type: h1
+    type: p
+    attribute:
+      class: text-center
     innerHTML: rs:name
   -
     type: widget
@@ -14,4 +16,5 @@ content:
       method: parse
       data:
         file: rs:path
+        save: rs:save
     
